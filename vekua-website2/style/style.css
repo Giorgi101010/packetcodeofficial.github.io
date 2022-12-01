@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* navigation bar */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(58, 58, 141);
+}
+
+.logo{
+    color: antiquewhite;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links{
+    transition: 0.5s;
+    display: flex;;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.nav-links a{
+    transition: 0.5s;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.nav-links li{
+    transition: 0.5s;
+    list-style: none;
+    padding: 12px;
+    border-bottom: 0px solid white;
+}
+.nav-links li:hover{
+    list-style: none;
+    padding: 12px;
+    background-color: white;
+    color: rgb(58, 58, 141);
+    border-radius: 20px;
+    box-shadow: rgb(57, 57, 57) 0px 0px 10px 0px;
+    transition: 0.5s;
+}
+.nav-links li:hover a{
+    padding: 12px;
+    color: rgb(58, 58, 141);
+    transition: 0.5s;
+}
+
+
+.burger{
+    display: none;
+    cursor: pointer;
+
+}
+
+.burger div{
+    height: 3px;
+    width: 25px;
+    background-color: wheat;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width:1024px){
+    .nav-links{
+        
+        width: 70%;
+    }
+    
+}
+
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color:  rgb(58, 58, 141);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in ;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px) ;
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px) ;
+}
+
+
+/* image slider */
+
+.swiper-container {
+    margin-top: 100px;
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.swiper{
+    width: 80%;
+    height: fit-content;
+}
+.swiper-slide img{
+    width: 100%;
+}
+.swiper-button-prev{ 
+    transition: 0.5s;
+}
+.swiper-button-next{ 
+    transition: 0.5s;
+}
+.swiper-button-next:hover{ 
+    color: #014a98 !important;
+    scale: 1.3;
+    transition: 0.5s;
+}
+.swiper-button-prev:hover{ 
+    color: #014a98 !important;
+    scale: 1.3;
+    transition: 0.5s;
+}
+
+/* -------------------------------------------- main-choosing -----------------------------------------*/
+.main-choosing{
+    margin-top: 100px;
+}
+.main-choosing_row{
+    height: 400px; 
+    justify-content: space-around;
+}
+.kalatburti-box{
+    background-image: url(/images/basketball-2.jpg);
+    background-size: cover;
+}
+.fexburti-box{
+    background-image: url(/images/football1.jpg);
+    background-size: cover;
+}
+.same-box{
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; 
+    padding: 0;
+}
+@media (max-width: 700px)
+{
+    .same-box{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+.same-box a{
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.784);
+    display: block; 
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    height:100%; 
+    width: 100%;
+    text-align: center;
+}
+.same-box a p{
+    transform: translateY(750%);
+}
+.same-box:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; 
+    padding: 0;
+    scale: 1.1;
+    transition: 0.5s;
+}
+.same-box:hover a{
+    background-color: rgba(0, 0, 0, 0.863);
+    display: block; 
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    height:100%; 
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: 0.5s;
+}
+
+.same-box1{
+    
+    border: 1px solid black;
+    margin: auto;
+    height: 50px;
+    width: 50%;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(250, 34, 34);
+    color: white;
+    
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    
+}
+
+
+/*------------------------------tamaashebi---------------------------------*/
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 500px) {
+    .same-box1{
+    
+        border: 1px solid black;
+        margin: auto;
+        height: 50px;
+        width: 70%;
+        letter-spacing: 3px;
+        margin-top: 20px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color:rgb(250, 34, 34);
+        color: white;
+        
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        
+    }
+}
+
+
+
+
+/*-----------------------------------------------------------gundebi-----------------------------------------*/
